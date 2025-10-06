@@ -22,7 +22,6 @@
       document.getElementById('outcome').innerHTML =
         "✅ Safe choice! You're protected and ready to forge.";
     }
-
     function skipPPE() {
       document.getElementById('outcome').innerHTML =
         "🔥 Ouch! Sparks fly — always wear your PPE!";
