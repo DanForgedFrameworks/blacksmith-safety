@@ -1,43 +1,67 @@
-/* --- Wig’s Wonky Forge Theme --- */
+/* --- Wig’s Wonky Forge Theme v2: Forged Glow --- */
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap');
 
 :root {
-  --color-primary: #b87333;
-  --color-dark: #2e2e2e;
-  --color-light: #fdf6ec;
-  --color-accent: #e56b2d;
-
+  --color-copper: #b87333;
+  --color-charcoal: #2e2e2e;
+  --color-cream: #fdf6ec;
+  --color-orange: #e56b2d;
   --font-heading: 'Montserrat', sans-serif;
   --font-body: 'Lato', sans-serif;
+  --radius: 14px;
+  --shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
+/* Global Base */
 body {
+  margin: 0;
   font-family: var(--font-body);
   font-size: 16px;
-  background-color: var(--color-light);
-  color: var(--color-dark);
+  background: var(--color-cream);
+  color: var(--color-charcoal);
+  line-height: 1.6;
 }
 
-h1, h2, h3, h4 {
+/* Header & Nav */
+header.site-header {
+  background: linear-gradient(135deg, var(--color-charcoal) 60%, var(--color-copper));
+  color: var(--color-cream);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+header.site-header h1 {
   font-family: var(--font-heading);
-  color: var(--color-primary);
+  font-size: 2rem;
+  margin: 0;
+  letter-spacing: 0.03em;
 }
 
-a, .button {
-  color: var(--color-accent);
+header.site-header .tagline {
+  font-style: italic;
+  opacity: 0.85;
+  margin-top: 0.3rem;
 }
 
-header, footer {
-  background-color: var(--color-dark);
-  color: var(--color-light);
-  padding: 1rem;
+/* Navigation bar */
+.site-nav {
+  background: var(--color-copper);
+  padding: 0.5rem 0;
+  text-align: center;
 }
 
-.card {
-  background-color: #fff;
-  border: 2px solid var(--color-primary);
-  border-radius: 10px;
-  padding: 1rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+.site-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
+
+.site-nav li {
+  display: inline-block;
+  margin: 0 0.75rem;
+}
+
+.site-nav a {
+  text-decoration: none;
