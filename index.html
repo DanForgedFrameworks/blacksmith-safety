@@ -6,7 +6,7 @@
   <title>Blacksmith Safety — Wig’s Wonky Forge</title>
   <meta name="description" content="Simple, accessible micro-learning for forge safety with a tiny mini-game. WCAG 2.2 AA / BS EN 301 549 aligned." />
 
-  <!-- Brand fonts (Montserrat headings, Lato body) -->
+  <!-- Brand fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
@@ -116,7 +116,7 @@
     </div>
   </footer>
 
-  <!-- JS: inline helpers + one-time video -->
+  <!-- Inline JS: footer year + play-once video -->
   <script>
     // Year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
@@ -129,7 +129,7 @@
       v.addEventListener('ended', () => {
         v.pause();
         v.currentTime = 0;  // rewind
-        v.load();           // reload so poster shows instead of a black/last frame
+        v.load();           // reload so poster shows instead of a last/black frame
       }, { once:true });
     })();
   </script>
