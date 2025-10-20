@@ -18,8 +18,11 @@
 }
 
 /* Responsive sizes for corner badge */
-@media (min-width: 600px){ :root{ --badge-size: 120px; } }   /* tablets */
-@media (min-width: 1024px){ :root{ --badge-size: 144px; } }  /* laptops/desktop */
+@media (min-width: 600px){ :root{ --badge-size: 180px; } }   /* tablets */
+@media (min-width: 1024px){ :root{ --badge-size: 240px; } }  /* laptops/desktop */
+
+.corner-badge{ width:var(--badge-size); height:var(--badge-size); }
+.corner-badge__video{ width:100%; height:100%; object-fit:cover; }
 
 /* Reset-ish */
 html{box-sizing:border-box}
@@ -59,12 +62,18 @@ h3{font-size:clamp(18px,2.6vw,22px)}
 
 /* === SITE LOGO (in header) === */
 .site-logo{
-  width: clamp(120px, 18vw, 220px);  /* min, fluid, max */
-  height: auto;                      /* keep aspect ratio */
+  /* responsive: smaller on phones, moderate on desktop */
+  width: clamp(120px, 18vw, 220px);
+  height: auto;                 /* keep aspect ratio */
   display: block;
-  margin: 8px auto 6px;              /* centred in header */
+  margin: 10px auto 6px;        /* centers logo in the header */
   filter: drop-shadow(0 4px 12px rgba(0,0,0,.22));
 }
+
+/* Optional: tighten header spacing so logo doesn’t crowd the nav */
+.site-header .wrap{ padding-top: 8px; padding-bottom: 8px; }
+@media (min-width: 900px){
+  .site-header .wrap{ padding-top: 12px; padding-bottom: 12px; }
 
 /* Hero (simple intro area) */
 .hero{padding:40px 0;text-align:center;background:radial-gradient(800px 300px at 10% 10%, rgba(184,115,51,.12), transparent)}
