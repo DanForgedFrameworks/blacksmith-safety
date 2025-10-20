@@ -1,101 +1,122 @@
 <!doctype html>
 <html lang="en-GB">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blacksmithing Starter — Safety & Setup</title>
-  <link rel="stylesheet" href="assets/styles.css?v=2">
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blacksmith Safety — Wig’s Wonky Forge</title>
+  <meta name="description" content="Simple, accessible micro-learning for forge safety with a tiny mini-game. WCAG 2.2 AA / BS EN 301 549 aligned." />
+  <!-- Fonts (keep your Montserrat / Lato brand) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <!-- Your site styles -->
+  <link rel="stylesheet" href="assets/styles.css?v=3">
 </head>
+
 <body>
+  <!-- Skip link for keyboard users -->
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
+
+  <!-- Header / site identity (no H1 here to avoid duplicate page titles) -->
+  <header class="site-header" role="banner">
     <div class="wrap">
-      <h1>Blacksmithing Starter</h1>
-      <p class="tagline">Setting up as a blacksmith — basic safety & awareness</p>
+      <p class="tagline" style="margin:.5rem 0 0"><strong>Wig’s Wonky Forge</strong> · Blacksmithing Starter — Safety & Setup</p>
     </div>
   </header>
+
+  <!-- Primary navigation -->
   <nav class="site-nav" aria-label="Primary">
     <ul>
       <li><a href="pages/forge-setup.html">Forge Setup</a></li>
       <li><a href="pages/ppe.html">PPE</a></li>
-      <li><a href="pages/ventilation.html">Ventilation & Fumes</a></li>
-      <li><a href="pages/fire.html">Fire & Fuel Safety</a></li>
-      <li><a href="pages/materials.html">Materials & Handling</a></li>
-      <li><a href="pages/first-aid.html">First Aid & Emergencies</a></li>
+      <li><a href="pages/ventilation.html">Ventilation &amp; Fumes</a></li>
+      <li><a href="pages/fire.html">Fire &amp; Fuel Safety</a></li>
+      <li><a href="pages/materials.html">Materials &amp; Handling</a></li>
+      <li><a href="pages/first-aid.html">First Aid &amp; Emergencies</a></li>
       <li><a href="pages/projects.html">Beginner Projects</a></li>
       <li><a href="pages/careful-dont-get-burnt.html">⚒️ Careful — Don’t Get Burnt!</a></li>
       <li><a href="pages/glossary.html">Glossary</a></li>
       <li><a href="pages/resources.html">Resources</a></li>
     </ul>
   </nav>
+
+  <!-- Main content -->
   <main id="main">
 
-  <!-- HERO (logo + name + two CTAs) -->
-  <section class="hero hero--center">
-    <div class="container">
-      <img class="hero__logo" src="assets/img/wig-round-logo.png" alt="Wig’s Wonky Forge logo">
-      <h1 class="hero__title">Blacksmith Safety</h1>
-      <p class="hero__lede">Simple, accessible micro-learning and a tiny safety mini-game.</p>
-      <div class="hero__cta">
-        <a class="btn btn--primary" href="#modules">Start learning</a>
-        <a class="btn btn--ghost" href="pages/careful-dont-get-burnt.html">Play mini-game</a>
+    <!-- HERO (logo + title + CTAs) -->
+    <section class="hero hero--center">
+      <div class="container">
+        <img class="hero__logo" src="assets/img/wig-round-logo.png" alt="Wig’s Wonky Forge round logo">
+        <!-- This is the single H1 for the page -->
+        <h1 class="hero__title">Blacksmith Safety</h1>
+        <p class="hero__lede">Simple, accessible micro-learning and a tiny safety mini-game.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#modules">Start learning</a>
+          <a class="btn btn--ghost" href="pages/careful-dont-get-burnt.html">Play mini-game</a>
+        </div>
       </div>
-    </div>
 
-    <!-- one-time corner video badge -->
-    <div class="corner-badge">
-      <video id="logoOnce"
-             class="corner-badge__video"
-             src="assets/vid/forge-v4.mp4"
-             poster="assets/img/wig-round-logo.png"
-             playsinline
-             muted
-             autoplay>
-      </video>
-    </div>
-  </section>
+      <!-- One-time corner video badge -->
+      <div class="corner-badge">
+        <video id="logoOnce"
+               class="corner-badge__video"
+               src="assets/vid/forge-v4.mp4"
+               poster="assets/img/wig-round-logo.png"
+               playsinline
+               muted
+               autoplay>
+        </video>
+      </div>
+    </section>
 
-  <!-- FEATURED MODULES (small grid) -->
-  <section id="modules" class="section">
-    <div class="container cards cards--tight">
-      <article class="card">
-        <h3>Forge Setup</h3>
-        <p>Layout, safe zones, airflow, housekeeping.</p>
-        <p><a class="btn btn--small" href="pages/forge-setup.html">Open</a></p>
-      </article>
-      <article class="card">
-        <h3>PPE Essentials</h3>
-        <p>Eye, hand, footwear, hearing — when and why.</p>
-        <p><a class="btn btn--small" href="pages/ppe.html">Open</a></p>
-      </article>
-      <article class="card">
-        <h3>Fire & Fuel</h3>
-        <p>Extinguishers, storage, ash handling, ventilation.</p>
-        <p><a class="btn btn--small" href="pages/fire.html">Open</a></p>
-      </article>
-      <article class="card">
-        <h3>Careful — Don’t Get Burnt!</h3>
-        <p>Quick safety choice challenge.</p>
-        <p><a class="btn btn--small" href="pages/careful-dont-get-burnt.html">Play</a></p>
-      </article>
-    </div>
-  </section>
+    <!-- FEATURED MODULES -->
+    <section id="modules" class="section">
+      <div class="container cards cards--tight">
+        <article class="card">
+          <h2>Forge Setup</h2>
+          <p>Layout, safe zones, airflow, housekeeping.</p>
+          <p><a class="btn btn--small" href="pages/forge-setup.html">Open</a></p>
+        </article>
+        <article class="card">
+          <h2>PPE Essentials</h2>
+          <p>Eye, hand, footwear, hearing — when and why.</p>
+          <p><a class="btn btn--small" href="pages/ppe.html">Open</a></p>
+        </article>
+        <article class="card">
+          <h2>Fire &amp; Fuel</h2>
+          <p>Extinguishers, storage, ash handling, ventilation.</p>
+          <p><a class="btn btn--small" href="pages/fire.html">Open</a></p>
+        </article>
+        <article class="card">
+          <h2>Careful — Don’t Get Burnt!</h2>
+          <p>Quick safety choice challenge.</p>
+          <p><a class="btn btn--small" href="pages/careful-dont-get-burnt.html">Play</a></p>
+        </article>
+      </div>
+    </section>
 
-  <!-- ABOUT (one paragraph) -->
-  <section id="about" class="section section--soft">
-    <div class="container narrow">
-      <h2>About</h2>
-      <p>CPD project in inclusive micro-learning (WCAG 2.2 AA / BS EN 301 549). Built with semantic HTML, Montserrat/Lato, and tested with keyboard, screen readers, and Lighthouse.</p>
-    </div>
-  </section>
+    <!-- ABOUT -->
+    <section id="about" class="section section--soft">
+      <div class="container narrow">
+        <h2>About</h2>
+        <p>CPD project in inclusive micro-learning (WCAG 2.2 AA / BS EN 301 549). Built with semantic HTML, Montserrat/Lato, and tested with keyboard, screen readers, and Lighthouse.</p>
+      </div>
+    </section>
 
-</main>
-  <footer class="site-footer">
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
     <div class="wrap">
-      <p>© 2025 Wig’s Wonky Forge · Educational use only.</p>
+      <p>© <span id="year"></span> Wig’s Wonky Forge · Educational use only.</p>
     </div>
   </footer>
-  <script src="assets/site.js"></script>
+
+  <!-- Scripts -->
+  <script src="assets/site.js?v=3"></script>
+  <script>
+    // small inline helpers
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
