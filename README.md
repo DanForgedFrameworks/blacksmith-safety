@@ -171,3 +171,31 @@ MIT — reuse/adapt for educational purposes with attribution.
 | 0.3 | YYYY-MM-DD | “Careful — Don’t Get Burnt!” added |
 | 0.4 | YYYY-MM-DD | README + accessibility documentation |
 
+---
+
+## 🧭 Latest Updates (v15 – October 2025)
+
+Blacksmith Safety has just had a major visual and structural refresh!  
+This update focuses on accessibility, responsive design, and smoother user experience across devices.  
+
+### ✨ Highlights
+- **Header Redesign:** Clean, centred logo with simplified navigation bar and modern pill-style highlights.  
+- **Emoji Navigation:** Added accessible dual emoji icons for visual personality while keeping ARIA-friendly labels.  
+- **Corner Video Badge:** Dynamic forge animation now plays once, then reverts to static poster image.  
+- **Clickable Cards:** All module boxes are now fully interactive with subtle hover animations.  
+- **Accessibility First:** Full WCAG 2.2 AA and BS EN 301 549 alignment (focus indicators, motion preferences, contrast).  
+- **Avatar Prep:** Framework in place for an interactive pixel avatar — to debut in v16!  
+
+🔗 **Full details:** See [`CHANGELOG.md`](CHANGELOG.md) for the complete technical breakdown and version history.
+
+---
+
+### 🛠️ Coming Soon (v16 Roadmap)
+- Expansion of card grid to include all modules listed in navigation.  
+- Launch of Wig’s animated pixel avatar (idle + wave states).  
+- Lighthouse accessibility and performance benchmarking.  
+- Dedicated Accessibility Statement page.  
+
+---
+
+
