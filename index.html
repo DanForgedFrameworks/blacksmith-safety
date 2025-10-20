@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
 
-  <!-- Site stylesheet -->
+  <!-- Site stylesheet (v9) -->
   <link rel="stylesheet" href="assets/styles.css?v=9">
 </head>
 
@@ -19,18 +19,14 @@
   <!-- Keyboard accessibility -->
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Header with SITE LOGO (resized via CSS) -->
-<header class="site-header" role="banner">
-  <div class="wrap">
-    <!-- SITE LOGO (top of page) -->
-    <img class="site-logo" src="assets/img/wig-round-logo.png" alt="Wig’s Wonky Forge logo">
-
-    <p class="tagline" style="margin:.5rem 0 0">
-      <strong>Wig’s Wonky Forge</strong> · Blacksmithing Starter — Safety &amp; Setup
-    </p>
-  </div>
-</header>
-
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="wrap">
+      <p class="tagline" style="margin:.5rem 0 0">
+        <strong>Wig’s Wonky Forge</strong> · Blacksmithing Starter — Safety &amp; Setup
+      </p>
+    </div>
+  </header>
 
   <!-- Navigation -->
   <nav class="site-nav" aria-label="Primary">
@@ -48,26 +44,34 @@
     </ul>
   </nav>
 
+  <!-- Reversed gradient bar under the menu -->
   <div class="underbar"></div>
 
   <!-- Main content -->
   <main id="main">
 
-    <!-- Simple intro (kept light; “hero” avatar comes later) -->
+    <!-- HERO -->
     <section class="hero hero--center">
       <div class="container">
+
+        <!-- Logo above the main title -->
         <img class="hero-mark" src="assets/img/wig-round-logo.png" alt="Wig’s Wonky Forge logo">
+
+        <!-- Single H1 for the page -->
         <h1 class="hero__title">Blacksmith Safety</h1>
-<!-- New strapline -->
-<p class="hero__strap">Pitfalls and trip hazards from Wig’s Wonky Forge</p>
+
+        <!-- New strapline -->
+        <p class="hero__strap">Pitfalls and trip hazards from Wig’s Wonky Forge</p>
+
         <p class="hero__lede">Simple, accessible micro-learning and a tiny safety mini-game.</p>
+
         <div class="hero__cta">
           <a class="btn btn--primary" href="#modules">Start learning</a>
           <a class="btn btn--ghost" href="pages/careful-dont-get-burnt.html">Play mini-game</a>
         </div>
       </div>
 
-      <!-- Corner badge (video plays once, then poster stays) -->
+      <!-- One-time corner video badge -->
       <div class="corner-badge">
         <video id="logoOnce"
                class="corner-badge__video"
@@ -77,34 +81,35 @@
                autoplay
                preload="metadata">
           <source src="assets/vid/forge-v4.mp4?v=2" type="video/mp4">
+          <!-- If you add a WebM fallback later, put it here -->
+          <!-- <source src="assets/vid/forge-v4.webm?v=1" type="video/webm"> -->
           Sorry, your browser can’t play this video.
         </video>
       </div>
     </section>
 
-    <!-- FEATURED MODULES -->
+    <!-- FEATURED MODULES (cards are full clickable links) -->
     <section id="modules" class="section">
       <div class="container cards cards--tight">
-        <article class="card">
+        <a class="card card--link" href="pages/forge-setup.html">
           <h2>Forge Setup</h2>
           <p>Layout, safe zones, airflow, housekeeping.</p>
-          <p><a class="btn btn--small" href="pages/forge-setup.html">Open</a></p>
-        </article>
-        <article class="card">
+        </a>
+
+        <a class="card card--link" href="pages/ppe.html">
           <h2>PPE Essentials</h2>
           <p>Eye, hand, footwear, hearing — when and why.</p>
-          <p><a class="btn btn--small" href="pages/ppe.html">Open</a></p>
-        </article>
-        <article class="card">
+        </a>
+
+        <a class="card card--link" href="pages/fire.html">
           <h2>Fire &amp; Fuel</h2>
           <p>Extinguishers, storage, ash handling, ventilation.</p>
-          <p><a class="btn btn--small" href="pages/fire.html">Open</a></p>
-        </article>
-        <article class="card">
+        </a>
+
+        <a class="card card--link" href="pages/careful-dont-get-burnt.html">
           <h2>Careful — Don’t Get Burnt!</h2>
           <p>Quick safety choice challenge.</p>
-          <p><a class="btn btn--small" href="pages/careful-dont-get-burnt.html">Play</a></p>
-        </article>
+        </a>
       </div>
     </section>
 
@@ -128,17 +133,17 @@
   <!-- Inline JS: footer year + play-once video -->
   <script>
     // Year in footer
-    (function(){ var el = document.getElementById('year'); if(el){ el.textContent = new Date().getFullYear(); } })();
+    document.getElementById('year').textContent = new Date().getFullYear();
 
     // Play the corner video ONCE, then freeze on poster
     (function(){
       const v = document.getElementById('logoOnce');
       if(!v) return;
-      v.addEventListener('error', () => v.load()); // if autoplay blocked, show poster
+      v.addEventListener('error', () => v.load());     // if autoplay blocked, show poster
       v.addEventListener('ended', () => {
         v.pause();
-        v.currentTime = 0;   // rewind
-        v.load();            // reload so POSTER is displayed (no loop)
+        v.currentTime = 0;  // rewind
+        v.load();           // reload so POSTER shows instead of last/black frame
       }, { once:true });
     })();
   </script>
