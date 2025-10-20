@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
 
   <!-- Site stylesheet -->
-  <link rel="stylesheet" href="assets/styles.css?v=4">
+  <link rel="stylesheet" href="assets/styles.css?v=7">
 </head>
 
 <body>
@@ -50,8 +50,7 @@
     <!-- HERO -->
     <section class="hero hero--center">
       <div class="container">
-        <img class="hero__logo" src="assets/img/wig-round-logo.png" alt="Wig’s Wonky Forge round logo">
-        <!-- Single H1 for the page -->
+       
         <h1 class="hero__title">Blacksmith Safety</h1>
         <p class="hero__lede">Simple, accessible micro-learning and a tiny safety mini-game.</p>
         <div class="hero__cta">
@@ -62,13 +61,14 @@
 
       <!-- One-time corner video badge -->
       <div class="corner-badge">
-        <video id="logoOnce"
-               class="corner-badge__video"
-               src="assets/vid/forge-v4.mp4"
-               poster="assets/img/wig-round-logo.png"
-               playsinline
-               muted
-               autoplay>
+  <video id="logoOnce"
+         class="corner-badge__video"
+         poster="assets/img/wig-round-logo.png"
+         playsinline
+         muted
+         autoplay
+         preload="metadata">
+    <source src="assets/vid/forge-v4.mp4?v=2" type="video/mp4">
         </video>
       </div>
     </section>
@@ -117,21 +117,21 @@
   </footer>
 
   <!-- Inline JS: footer year + play-once video -->
-  <script>
-    // Year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
+ <script>
+  // Year in footer (keep if you use it)
+  var el = document.getElementById('year'); if(el){ el.textContent = new Date().getFullYear(); }
 
-    // Play the corner video ONCE, then freeze on poster
-    (function(){
-      const v = document.getElementById('logoOnce');
-      if(!v) return;
-      v.addEventListener('error', () => v.load());     // if autoplay blocked, show poster
-      v.addEventListener('ended', () => {
-        v.pause();
-        v.currentTime = 0;  // rewind
-        v.load();           // reload so poster shows instead of a last/black frame
-      }, { once:true });
-    })();
-  </script>
+  // Play-once logic: when video ends, freeze on poster (same size)
+  (function(){
+    const v = document.getElementById('logoOnce');
+    if(!v) return;
+    v.addEventListener('error', () => v.load());  // if autoplay blocked, show poster
+    v.addEventListener('ended', () => {
+      v.pause();
+      v.currentTime = 0;   // rewind
+      v.load();            // reload so POSTER is displayed instead of last/black frame
+    }, { once:true });
+  })();
+</script>
 </body>
 </html>
