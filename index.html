@@ -11,22 +11,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
 
-  <!-- Site stylesheet (v12) -->
-  <link rel="stylesheet" href="assets/styles.css?v=12">
+  <!-- Site stylesheet (v13) -->
+  <link rel="stylesheet" href="assets/styles.css?v=13">
 </head>
 
 <body>
-  <!-- Keyboard accessibility -->
+  <!-- Skip to content for keyboard users -->
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Header: LOGO ONLY (centered) -->
+  <!-- HEADER: logo only (no tagline) -->
   <header class="site-header" role="banner">
     <div class="wrap">
       <img class="site-logo" src="assets/img/wig-round-logo.png" alt="Wig’s Wonky Forge logo">
     </div>
   </header>
 
-  <!-- Navigation (logo sits above this) -->
+  <!-- NAV -->
   <nav class="site-nav" aria-label="Primary">
     <ul>
       <li><a href="index.html" aria-current="page">Home</a></li>
@@ -43,13 +43,13 @@
     </ul>
   </nav>
 
-  <!-- Reversed gradient bar under the menu -->
+  <!-- Thin gradient bar under nav -->
   <div class="underbar"></div>
 
-  <!-- Main content -->
+  <!-- MAIN -->
   <main id="main">
 
-    <!-- HERO (no logo here now) -->
+    <!-- HERO (no logo here) -->
     <section class="hero hero--center">
       <div class="container">
         <h1 class="hero__title">Blacksmith Safety</h1>
@@ -62,7 +62,7 @@
         </div>
       </div>
 
-      <!-- One-time corner video badge -->
+      <!-- Corner video badge (plays once, then poster) -->
       <div class="corner-badge">
         <video id="logoOnce"
                class="corner-badge__video"
@@ -80,7 +80,7 @@
       </div>
     </section>
 
-    <!-- FEATURED MODULES (cards are full clickable links) -->
+    <!-- FEATURED MODULES (cards are full links) -->
     <section id="modules" class="section">
       <div class="container cards cards--tight">
         <a class="card card--link" href="pages/forge-setup.html">
@@ -115,27 +115,27 @@
 
   </main>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer class="site-footer" role="contentinfo">
     <div class="wrap">
       <p>© <span id="year"></span> Wig’s Wonky Forge · Educational use only.</p>
     </div>
   </footer>
 
-  <!-- Inline JS: footer year + play-once video -->
+  <!-- JS: footer year + play-once logic -->
   <script>
     // Year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Play the corner video ONCE, then freeze on poster
+    // Play corner video once, then show poster
     (function(){
       const v = document.getElementById('logoOnce');
       if(!v) return;
-      v.addEventListener('error', () => v.load());     // if autoplay blocked, show poster
+      v.addEventListener('error', () => v.load());
       v.addEventListener('ended', () => {
         v.pause();
-        v.currentTime = 0;  // rewind
-        v.load();           // reload so POSTER shows instead of last/black frame
+        v.currentTime = 0;
+        v.load();
       }, { once:true });
     })();
   </script>
