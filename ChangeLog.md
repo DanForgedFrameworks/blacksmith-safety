@@ -5,11 +5,12 @@ Cross-reference related GitHub Issues using `#issue-number` for full traceabilit
 
 ---
 
-### 🧱 Session Summary – YYYY-MM-DD
+### 🧱 Session Summary – 2025-10-20
+**Changes:** Minimal portfolio-style hero; centered logo; tightened module cards; added one-time corner video badge.
+**POUR:** Perceivable (alt text, contrast), Operable (focus outlines), Understandable (clear hierarchy), Robust (semantic HTML).
+**Linked Issues:** (add numbers when you log them)
+**CPD:** Noted Lighthouse run; next: add focus-trap to burger menu on small screens.
 
-**Changes Made**
-- [Describe changes; include issue refs, e.g. “Fixed keyboard trap in drawer (#4)”]
-- [Add new or modified files if relevant]
 
 **Accessibility / POUR Links**
 - *Perceivable:* …
