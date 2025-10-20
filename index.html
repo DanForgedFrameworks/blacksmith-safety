@@ -5,26 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Blacksmith Safety — Wig’s Wonky Forge</title>
   <meta name="description" content="Simple, accessible micro-learning for forge safety with a tiny mini-game. WCAG 2.2 AA / BS EN 301 549 aligned." />
-  <!-- Fonts (keep your Montserrat / Lato brand) -->
+
+  <!-- Brand fonts (Montserrat headings, Lato body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-  <!-- Your site styles -->
-  <link rel="stylesheet" href="assets/styles.css?v=3">
+
+  <!-- Site stylesheet -->
+  <link rel="stylesheet" href="assets/styles.css?v=4">
 </head>
 
 <body>
-  <!-- Skip link for keyboard users -->
+  <!-- Keyboard accessibility -->
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Header / site identity (no H1 here to avoid duplicate page titles) -->
+  <!-- Header -->
   <header class="site-header" role="banner">
     <div class="wrap">
-      <p class="tagline" style="margin:.5rem 0 0"><strong>Wig’s Wonky Forge</strong> · Blacksmithing Starter — Safety & Setup</p>
+      <p class="tagline" style="margin:.5rem 0 0">
+        <strong>Wig’s Wonky Forge</strong> · Blacksmithing Starter — Safety &amp; Setup
+      </p>
     </div>
   </header>
 
-  <!-- Primary navigation -->
+  <!-- Navigation -->
   <nav class="site-nav" aria-label="Primary">
     <ul>
       <li><a href="pages/forge-setup.html">Forge Setup</a></li>
@@ -43,11 +47,11 @@
   <!-- Main content -->
   <main id="main">
 
-    <!-- HERO (logo + title + CTAs) -->
+    <!-- HERO -->
     <section class="hero hero--center">
       <div class="container">
         <img class="hero__logo" src="assets/img/wig-round-logo.png" alt="Wig’s Wonky Forge round logo">
-        <!-- This is the single H1 for the page -->
+        <!-- Single H1 for the page -->
         <h1 class="hero__title">Blacksmith Safety</h1>
         <p class="hero__lede">Simple, accessible micro-learning and a tiny safety mini-game.</p>
         <div class="hero__cta">
@@ -112,11 +116,22 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="assets/site.js?v=3"></script>
+  <!-- JS: inline helpers + one-time video -->
   <script>
-    // small inline helpers
+    // Year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Play the corner video ONCE, then freeze on poster
+    (function(){
+      const v = document.getElementById('logoOnce');
+      if(!v) return;
+      v.addEventListener('error', () => v.load());     // if autoplay blocked, show poster
+      v.addEventListener('ended', () => {
+        v.pause();
+        v.currentTime = 0;  // rewind
+        v.load();           // reload so poster shows instead of a black/last frame
+      }, { once:true });
+    })();
   </script>
 </body>
 </html>
