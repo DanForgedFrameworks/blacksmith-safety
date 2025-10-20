@@ -29,61 +29,68 @@
       <li><a href="pages/resources.html">Resources</a></li>
     </ul>
   </nav>
-  <main id="main" class="wrap">
-    <section class="callout">
-      <h2>Welcome</h2>
-      <p>This site is a beginner-friendly guide for setting up a small blacksmithing space with a strong emphasis on safety, awareness, and good habits from day one.</p>
-      <p class="small"><strong>Disclaimer:</strong> Informational guidance only. Always follow current UK regulations and manufacturer instructions.</p>
-    </section>
+  <main id="main">
 
-    <section class="cards">
+  <!-- HERO (logo + name + two CTAs) -->
+  <section class="hero hero--center">
+    <div class="container">
+      <img class="hero__logo" src="assets/img/wig-round-logo.png" alt="Wig’s Wonky Forge logo">
+      <h1 class="hero__title">Blacksmith Safety</h1>
+      <p class="hero__lede">Simple, accessible micro-learning and a tiny safety mini-game.</p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#modules">Start learning</a>
+        <a class="btn btn--ghost" href="pages/careful-dont-get-burnt.html">Play mini-game</a>
+      </div>
+    </div>
+
+    <!-- one-time corner video badge -->
+    <div class="corner-badge">
+      <video id="logoOnce"
+             class="corner-badge__video"
+             src="assets/vid/forge-v4.mp4"
+             poster="assets/img/wig-round-logo.png"
+             playsinline
+             muted
+             autoplay>
+      </video>
+    </div>
+  </section>
+
+  <!-- FEATURED MODULES (small grid) -->
+  <section id="modules" class="section">
+    <div class="container cards cards--tight">
       <article class="card">
         <h3>Forge Setup</h3>
-        <p>Layout, anvil/vice placement, safe working clearances, housekeeping.</p>
-        <p><a class="button" href="pages/forge-setup.html">Open</a></p>
+        <p>Layout, safe zones, airflow, housekeeping.</p>
+        <p><a class="btn btn--small" href="pages/forge-setup.html">Open</a></p>
       </article>
       <article class="card">
-        <h3>PPE</h3>
-        <p>Eye protection, gloves, footwear, hearing protection — and when to use what.</p>
-        <p><a class="button" href="pages/ppe.html">Open</a></p>
+        <h3>PPE Essentials</h3>
+        <p>Eye, hand, footwear, hearing — when and why.</p>
+        <p><a class="btn btn--small" href="pages/ppe.html">Open</a></p>
       </article>
       <article class="card">
-        <h3>Ventilation & Fumes</h3>
-        <p>Airflow basics, CO awareness, fuel types, and monitoring.</p>
-        <p><a class="button" href="pages/ventilation.html">Open</a></p>
+        <h3>Fire & Fuel</h3>
+        <p>Extinguishers, storage, ash handling, ventilation.</p>
+        <p><a class="btn btn--small" href="pages/fire.html">Open</a></p>
       </article>
       <article class="card">
-        <h3>Fire & Fuel Safety</h3>
-        <p>Extinguishers, storage, ash handling, hot work permits (where relevant).</p>
-        <p><a class="button" href="pages/fire.html">Open</a></p>
+        <h3>Careful — Don’t Get Burnt!</h3>
+        <p>Quick safety choice challenge.</p>
+        <p><a class="btn btn--small" href="pages/careful-dont-get-burnt.html">Play</a></p>
       </article>
-      <article class="card">
-        <h3>Materials & Handling</h3>
-        <p>Stock selection, hot/cold identification, tongs, lifting basics.</p>
-        <p><a class="button" href="pages/materials.html">Open</a></p>
-      </article>
-      <article class="card">
-        <h3>First Aid & Emergencies</h3>
-        <p>Burns basics, eye incidents, isolation & call-out info.</p>
-        <p><a class="button" href="pages/first-aid.html">Open</a></p>
-      </article>
-      <article class="card">
-        <h3>Beginner Projects</h3>
-        <p>Hooks, fire poker, leaf keyring — with step-by-step structure.</p>
-        <p><a class="button" href="pages/projects.html">Open</a></p>
-      </article>
-      <article class="card">
-        <h3>Glossary</h3>
-        <p>Common terms and tools with plain-English definitions.</p>
-        <p><a class="button" href="pages/glossary.html">Open</a></p>
-      </article>
-      <article class="card">
-        <h3>Resources</h3>
-        <p>Links and references. Keep a full URL chain at the end.</p>
-        <p><a class="button" href="pages/resources.html">Open</a></p>
-      </article>
-    </section>
-  </main>
+    </div>
+  </section>
+
+  <!-- ABOUT (one paragraph) -->
+  <section id="about" class="section section--soft">
+    <div class="container narrow">
+      <h2>About</h2>
+      <p>CPD project in inclusive micro-learning (WCAG 2.2 AA / BS EN 301 549). Built with semantic HTML, Montserrat/Lato, and tested with keyboard, screen readers, and Lighthouse.</p>
+    </div>
+  </section>
+
+</main>
   <footer class="site-footer">
     <div class="wrap">
       <p>© 2025 Wig’s Wonky Forge · Educational use only.</p>
