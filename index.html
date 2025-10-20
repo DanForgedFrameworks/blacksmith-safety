@@ -11,26 +11,25 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
 
-  <!-- Site stylesheet (v9) -->
-  <link rel="stylesheet" href="assets/styles.css?v=9">
+  <!-- Site stylesheet (v11) -->
+  <link rel="stylesheet" href="assets/styles.css?v=11">
 </head>
 
 <body>
   <!-- Keyboard accessibility -->
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Header -->
+  <!-- Header (logo image only) -->
   <header class="site-header" role="banner">
     <div class="wrap">
-      <p class="tagline" style="margin:.5rem 0 0">
-        <strong>Wig’s Wonky Forge</strong> · Blacksmithing Starter — Safety &amp; Setup
-      </p>
+      <img class="site-logo" src="assets/img/wig-round-logo.png" alt="Wig’s Wonky Forge logo">
     </div>
   </header>
 
   <!-- Navigation -->
   <nav class="site-nav" aria-label="Primary">
     <ul>
+      <li><a href="index.html" aria-current="page">Home</a></li>
       <li><a href="pages/forge-setup.html">Forge Setup</a></li>
       <li><a href="pages/ppe.html">PPE</a></li>
       <li><a href="pages/ventilation.html">Ventilation &amp; Fumes</a></li>
@@ -53,16 +52,11 @@
     <!-- HERO -->
     <section class="hero hero--center">
       <div class="container">
-
-        <!-- Logo above the main title -->
-        <img class="hero-mark" src="assets/img/wig-round-logo.png" alt="Wig’s Wonky Forge logo">
-
         <!-- Single H1 for the page -->
         <h1 class="hero__title">Blacksmith Safety</h1>
 
-        <!-- New strapline -->
+        <!-- Strapline + lede -->
         <p class="hero__strap">Pitfalls and trip hazards from Wig’s Wonky Forge</p>
-
         <p class="hero__lede">Simple, accessible micro-learning and a tiny safety mini-game.</p>
 
         <div class="hero__cta">
@@ -81,8 +75,9 @@
                autoplay
                preload="metadata">
           <source src="assets/vid/forge-v4.mp4?v=2" type="video/mp4">
-          <!-- If you add a WebM fallback later, put it here -->
-          <!-- <source src="assets/vid/forge-v4.webm?v=1" type="video/webm"> -->
+          <!-- Optional WebM fallback:
+          <source src="assets/vid/forge-v4.webm?v=1" type="video/webm">
+          -->
           Sorry, your browser can’t play this video.
         </video>
       </div>
