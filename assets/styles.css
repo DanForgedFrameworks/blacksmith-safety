@@ -187,12 +187,17 @@ a:focus,.btn:focus,button:focus{outline:3px solid var(--orange);outline-offset:2
   width: 128px;
   height: 128px;
 
-  z-index: 5000;              /* sit above everything */
-  image-rendering: pixelated; /* keep chunky pixels when upscaled */
-  border-radius: 8px;
-  border: 2px solid var(--copper);
-  box-shadow: 0 6px 16px rgba(0,0,0,.25);
+  z-index: 5000;               /* sit above everything */
+  image-rendering: pixelated;  /* keep chunky pixels when upscaled */
+
+  /* 👇 make it look borderless/on-glass */
+  border-radius: 0;            /* or keep 8px if you like rounded */
+  border: 0;                   /* was: 2px solid var(--copper) */
+  box-shadow: none;            /* was: 0 6px 16px rgba(0,0,0,.25) */
   background: transparent;
+
+  /* optional: pass clicks through the avatar */
+  /* pointer-events: none; */
 }
 
 /* Debug helper — uncomment if you still can't see it
