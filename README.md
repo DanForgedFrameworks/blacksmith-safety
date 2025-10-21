@@ -166,10 +166,6 @@ MIT — reuse/adapt for educational purposes with attribution.
 ## Version History
 | Version | Date | Summary |
 |--------:|------|---------|
-| 0.1 | YYYY-MM-DD | Initial homepage and layout |
-| 0.2 | YYYY-MM-DD | Drawer nav + toast system |
-| 0.3 | YYYY-MM-DD | “Careful — Don’t Get Burnt!” added |
-| 0.4 | YYYY-MM-DD | README + accessibility documentation |
 | **v15** | 2025-10-20 | Major UI redesign — header simplification, centred logo, accessible navigation, and emoji-enhanced menus |
 | **v16-preview** | 2025-10-20 | README integration + public roadmap for upcoming accessibility and avatar features |
 | **v17** | 2025-10-21 | Animated pixel avatar (Wig-Idle-Anim.gif) added to bottom-left corner; borderless styling, WCAG/BS 301 549 alignment verified |
