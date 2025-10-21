@@ -183,18 +183,15 @@ a:focus,.btn:focus,button:focus{outline:3px solid var(--orange);outline-offset:2
   left: 12px;
   bottom: 12px;
 
-  /* size — must match the HTML width/height for crisp pixels */
   width: 128px;
   height: 128px;
 
-  z-index: 5000;               /* sit above everything */
-  image-rendering: pixelated;  /* keep chunky pixels when upscaled */
-
-  /* 👇 make it look borderless/on-glass */
-  border-radius: 0;            /* or keep 8px if you like rounded */
-  border: 0;                   /* was: 2px solid var(--copper) */
-  box-shadow: none;            /* was: 0 6px 16px rgba(0,0,0,.25) */
+  z-index: 5000;
+  image-rendering: pixelated;  /* keeps that crisp look */
+  border: 0;
+  box-shadow: none;
   background: transparent;
+}
 
   /* optional: pass clicks through the avatar */
   /* pointer-events: none; */
