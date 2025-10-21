@@ -182,21 +182,28 @@ a:focus,.btn:focus,button:focus{outline:3px solid var(--orange);outline-offset:2
   position: fixed;
   left: 12px;
   bottom: 12px;
-  z-index: 1200;
 
-  /* size: change these to match your sprite’s native size */
-  width: 96px;
-  height: 96px;
+  /* size — must match the HTML width/height for crisp pixels */
+  width: 128px;
+  height: 128px;
 
-  image-rendering: pixelated;  /* keep crisp chunky pixels */
+  z-index: 5000;              /* sit above everything */
+  image-rendering: pixelated; /* keep chunky pixels when upscaled */
   border-radius: 8px;
   border: 2px solid var(--copper);
   box-shadow: 0 6px 16px rgba(0,0,0,.25);
-  background: #fff0;           /* transparent backdrop */
+  background: transparent;
 }
 
-/* Optional: responsive nudge so it doesn’t overlay UI on tiny screens */
+/* Debug helper — uncomment if you still can't see it
+.avatar{ outline: 2px solid red; background: rgba(255,0,0,.06); }
+*/
+
+/* Nudge on tiny phones so it doesn't block UI */
 @media (max-width: 420px){
   .avatar{ left: 8px; bottom: 72px; }
+}
+
+
 }
 
